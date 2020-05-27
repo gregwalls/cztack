@@ -31,10 +31,14 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| env | Env for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
 | iam\_path | The IAM path to put this role in. | `string` | `"/"` | no |
 | oidc | A list of AWS OIDC IDPs to establish a trust relationship for this role. | <pre>list(object(<br>    {<br>      idp_arn : string,          # the AWS IAM IDP arn<br>      client_ids : list(string), # a list of oidc client ids<br>      provider : string          # your provider url, such as foo.okta.com<br>    }<br>  ))</pre> | `[]` | no |
+| owner | Owner for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
+| project | Project for tagging and naming. See [doc](../README.md#consistent-tagging) | `string` | `null` | no |
 | role\_name | The name of the role. | `string` | n/a | yes |
 | saml\_idp\_arn | The AWS SAML IDP arn to establish a trust relationship. Ignored if empty or not provided. | `string` | `""` | no |
+| service | Service for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
 | source\_account\_id | The source AWS account to establish a trust relationship. Ignored if empty or not provided. DEPRECATED: Please use source\_account\_ids. | `string` | `""` | no |
 | source\_account\_ids | The source AWS account IDs to establish a trust relationship. Ignored if empty or not provided. | `set(string)` | `[]` | no |
 

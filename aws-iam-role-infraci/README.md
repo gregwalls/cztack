@@ -17,9 +17,13 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| env | Env for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
 | iam\_path | n/a | `string` | `"/"` | no |
+| owner | Owner for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
+| project | Project for tagging and naming. See [doc](../README.md#consistent-tagging) | `string` | `null` | no |
 | role\_name | n/a | `string` | `"infraci"` | no |
 | saml\_idp\_arn | The AWS SAML IDP arn to establish a trust relationship. Ignored if empty or not provided. | `string` | `""` | no |
+| service | Service for tagging and naming. See [doc](../README.md#consistent-tagging). | `string` | `null` | no |
 | source\_account\_id | The source AWS account to establish a trust relationship. Ignored if empty or not provided. DEPRECATED: Pleaase use source\_account\_ids. | `string` | `""` | no |
 | source\_account\_ids | The source AWS account IDs to establish a trust relationship. Ignored if empty or not provided. | `set(string)` | `[]` | no |
 | terraform\_state\_lock\_dynamodb\_arns | ARNs of the state file DynamoDB tables | `list(string)` | `[]` | no |
