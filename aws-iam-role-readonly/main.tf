@@ -1,11 +1,11 @@
 locals {
-  tags = {
-    project   = var.project
-    env       = var.env
-    service   = var.service
-    owner     = var.owner
-    managedBy = "terraform"
-  }
+  tags = merge(
+    (var.project == null ? {} : { project = var.project }),
+    (var.env == null ? {} : { env = var.env }),
+    (var.service == null ? {} : { service = var.service }),
+    (var.owner == null ? {} : { owner = var.owner }),
+    { managedBy = "terraform" }
+  )
 }
 
 data "aws_iam_policy_document" "assume-role" {

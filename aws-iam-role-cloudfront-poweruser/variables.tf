@@ -38,19 +38,23 @@ variable "saml_idp_arn" {
 variable "project" {
   type        = string
   description = "Project for tagging and naming. See [doc](../README.md#consistent-tagging)"
+  default     = null
 }
 
 variable "env" {
   type        = string
   description = "Env for tagging and naming. See [doc](../README.md#consistent-tagging)."
+  default     = null
 }
 
 variable "service" {
   type        = string
   description = "Service for tagging and naming. See [doc](../README.md#consistent-tagging)."
+  default     = null
 }
 
 variable "owner" {
   type        = string
   description = "Owner for tagging and naming. See [doc](../README.md#consistent-tagging)."
+  default     = null
 }
